@@ -97,5 +97,25 @@ return {
         guifont = "LXGW Wenkai Mono:h18",
       },
     },
+    -- macOS 下 Neovide 的 Cmd+C 复制 / Cmd+V 粘贴
+    mappings = {
+      n = {
+        ["<D-v>"] = { '"+p', desc = "Paste from system clipboard" },
+        ["<D-c>"] = { '"+y', desc = "Copy to system clipboard" },
+      },
+      v = {
+        ["<D-c>"] = { '"+y', desc = "Copy to system clipboard" },
+        ["<D-v>"] = { '"+p', desc = "Paste from system clipboard" },
+      },
+      i = {
+        ["<D-v>"] = { "<C-r>+", desc = "Paste from system clipboard" },
+      },
+      c = {
+        ["<D-v>"] = { "<C-r>+", desc = "Paste from system clipboard" },
+      },
+      t = {
+        ["<D-v>"] = { '<C-\\><C-n>"+pi', desc = "Paste from system clipboard" },
+      },
+    },
   },
 }
