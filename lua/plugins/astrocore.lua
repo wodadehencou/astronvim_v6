@@ -91,5 +91,11 @@ return {
       -- 关闭按键自动清除/开启搜索高亮的功能
       auto_hlsearch = false,
     },
+    options = {
+      opt = {
+        -- Neovide (以及其他 GUI) 通过 guifont 设置字体：<字体名>:h<字号>
+        guifont = "LXGW Wenkai Mono:h18",
+      },
+    },
   },
 }
