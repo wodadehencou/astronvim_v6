@@ -102,6 +102,9 @@ return {
       n = {
         ["<D-v>"] = { '"+p', desc = "Paste from system clipboard" },
         ["<D-c>"] = { '"+y', desc = "Copy to system clipboard" },
+        -- 互换 # 和 * 的键位：# 向下（正向）搜索，* 向上（反向）搜索
+        ["#"] = { "*", desc = "Search word under cursor forward" },
+        ["*"] = { "#", desc = "Search word under cursor backward" },
       },
       v = {
         ["<D-c>"] = { '"+y', desc = "Copy to system clipboard" },
