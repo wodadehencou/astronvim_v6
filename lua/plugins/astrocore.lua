@@ -100,9 +100,9 @@ return {
     -- macOS 下 Neovide 的 Cmd+C 复制 / Cmd+V 粘贴
     mappings = {
       n = {
-        -- 左右方向键切换 tab 页
-        ["<Right>"] = { "gt", desc = "Next tab" },
-        ["<Left>"] = { "gT", desc = "Previous tab" },
+        -- 左右方向键切换 buffer
+        ["<Right>"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
+        ["<Left>"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
         ["<D-v>"] = { '"+p', desc = "Paste from system clipboard" },
         ["<D-c>"] = { '"+y', desc = "Copy to system clipboard" },
         -- 互换 # 和 * 的键位：# 向下（正向）搜索，* 向上（反向）搜索
